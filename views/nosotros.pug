@@ -1,4 +1,30 @@
 extends ./layout/index
 
 block contenido
-    p=pagina
+    main.container.mt-5 
+        .row 
+            .col-md-5
+                img(src="img/nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+            .col-md-7
+                h1=pagina
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in diam tincidunt, sollicitudin neque at, consequat velit. Nam egestas neque vitae rutrum sodales.
+
+                p Aliquam in sem a turpis euismod vehicula rutrum quis nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla porttitor congue tellus tincidunt cursus. Vivamus in lorem tristique tortor volutpat pulvinar sit amet in diam. Sed blandit urna tortor, vitae viverra ipsum aliquet quis.
+
+                p Etiam neque arcu, tempus id fringilla sit amet, auctor ut odio. Phasellus arcu enim, fringilla sed lorem et, elementum dapibus est. Donec ut elit ut turpis posuere egestas eget nec lorem. Nunc viverra vehicula massa, vel gravida est cursus eu. Sed varius id dui non tempus. Donec vel mauris sed leo faucibus efficitur aliquam ut lectus. Mauris vel turpis lacus.
+
+    .listado-iconos 
+        .container.mt-5.py-5.text-center 
+            .row 
+                .col-md-4 
+                    img(src="img/icono_seguridad.svg", alt="seguridad" class="img-fluid mb-4")
+                    h2.mb-4 Seguridad 
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique architecto ipsum vel deserunt commodi fugiat quo? Quam totam excepturi earum, fuga id cum est aut, architecto possimus minima enim eveniet.
+                .col-md-4 
+                    img(src="img/icono_destinos.svg", alt="destinos" class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos 
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique architecto ipsum vel deserunt commodi fugiat quo? Quam totam excepturi earum, fuga id cum est aut, architecto possimus minima enim eveniet.
+                .col-md-4 
+                    img(src="img/icono_precios.svg", alt="precios" class="img-fluid mb-4")
+                    h2.mb-4 Precios
+                    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique architecto ipsum vel deserunt commodi fugiat quo? Quam totam excepturi earum, fuga id cum est aut, architecto possimus minima enim eveniet.
