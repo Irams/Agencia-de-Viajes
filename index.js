@@ -3,7 +3,6 @@ import router from './routes/index.js';
 import db from './config/db.js';
 
 // const express = require ('express');
-
 const app = express();
 
 //Conectar la BD
