@@ -1,4 +1,5 @@
 import Sequelize from 'sequelize';
+// require('dotenv').config({path: 'variable.env'})
 
 const db = new Sequelize('agenciaviajes', 'root', '', {
     host: '127.0.0.1',

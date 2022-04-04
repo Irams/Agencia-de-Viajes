@@ -1,9 +1,24 @@
 import { Viaje } from "../models/Viaje.js";
+import { Testimonial } from "../models/Testimoniales.js";
 
-const paginaInicio = (req, res) => {
-    res.render('inicio', {
-        pagina: 'Inicio'
-    });
+const paginaInicio = async (req, res) => {
+
+    //Consultar tres viajes del modelo viaje
+
+    try {
+
+        const viajes = await Viaje.findAll({ limit:3 });
+
+        res.render('inicio', {
+            pagina: 'Inicio',
+            clase: 'home',
+            viajes
+        });
+        
+    } catch (error) {
+        console.log(error);
+    }
+
 }
 
 const paginaNosotros = (req, res) => {
@@ -24,10 +39,19 @@ const paginaViajes = async (req, res) => {
     });
 }
 
-const paginaTestimoniales = (req, res) => {
-    res.render('testimoniales', {
-        pagina: 'Testimoniales'
-    });
+const paginaTestimoniales = async (req, res) => {
+
+    try {
+        const testimoniales = await Testimonial.findAll()
+        res.render('testimoniales', {
+            pagina: 'Testimoniales',
+            testimoniales
+        });
+        
+    } catch (error) {
+        console.log(error);
+    }
+
 }
 
 //Muestra un viaje por su slug

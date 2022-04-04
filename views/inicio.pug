@@ -1,6 +1,18 @@
 extends ./layout/index
 
+block slider
+    .slider 
+        h1 Rio de Janeiro 
+        em Aventurero  
+
 block contenido
     main.container.mt-5 
-        .row 
-            h1= pagina
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5 
+            .col-md-6 
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus tortor sapien, eu condimentum tortor tempor vel. Quisque dignissim lorem quis egestas eleifend. Nulla convallis risus ut ante tempus efficitur. Nullam ultricies odio rhoncus risus commodo faucibus. Ut a mattis sapien. In hac habitasse platea dictumst. Maecenas consectetur est vitae tempus tincidunt. Etiam dapibus rhoncus molestie.
+                p Nullam justo eros, luctus sit amet tristique eu, viverra vitae felis. Vivamus pharetra magna ut nisl viverra, eu tristique tortor tempor. Nunc nec venenatis felis. 
+            .col-md-6
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+
+        include ./layout/bloque_viajes.pug
