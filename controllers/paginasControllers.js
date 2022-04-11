@@ -3,16 +3,22 @@ import { Testimonial } from "../models/Testimoniales.js";
 
 const paginaInicio = async (req, res) => {
 
-    //Consultar tres viajes del modelo viaje
+    //Consultar tres viajes del modelo viaje y al mismo tiempo los testimoniales y enviar tres de ellos a la vista de Inicio
+
+    const promiseDB = [];
+
+    promiseDB.push(Viaje.findAll({ limit:3 }));
+    promiseDB.push(Testimonial.findAll({ limit:3 }));
 
     try {
 
-        const viajes = await Viaje.findAll({ limit:3 });
+        const resultado = await Promise.all(promiseDB);
 
         res.render('inicio', {
             pagina: 'Inicio',
             clase: 'home',
-            viajes
+            viajes: resultado[0],
+            testimoniales: resultado[1]
         });
         
     } catch (error) {

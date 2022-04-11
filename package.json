@@ -4,7 +4,8 @@
   "description": "Prueba 2",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "type": "module",
   "author": "HIMS",
@@ -16,6 +17,7 @@
     "sequelize": "^6.17.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "nodemon": "^2.0.15"
   }
 }
