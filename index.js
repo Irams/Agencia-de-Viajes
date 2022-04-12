@@ -33,7 +33,7 @@ db.authenticate()
     app.use('/', router);
     
     //Definir el puerto
-    const port = process.env.PORT || 4000;
+    const port = process.env.PORT || 5000;
     const host = process.env.HOST || '0.0.0.0';
     
     app.listen(port, host, ()=>{
